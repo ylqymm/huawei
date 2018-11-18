@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/productList.css">
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <title>商品列表</title>
+</head>
+<body>
+    <!-- header部分 -->
+<header>
+    <div class="header_cen">
+        <div class="header_top">
+            <div class="header_left">
+                <ul>
+                    <li><a href="index.html">首页</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">华为官网</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">荣耀官网</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">花粉俱乐部</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">帮助中心</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">V码(优乐码)</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">企业购</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">Select Region</a> &nbsp;|</li>
+                    <li class="app">
+                        <a href="javascript:void(0);">下载APP&nbsp; <span class="span"></span>
+                        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+                        <div class="p">
+                            <img src="img/index/erweima.png" alt="">
+                            <p>扫一扫，下载客户端</p>
+                        </div>
+                    </li>
+                    <li class="app"><a href="javascript:void(0);">更多精彩 &nbsp;<span class="span"></span></a>
+                        <div class="p">
+                            <a href="javascript:void(0);">EMUI</a>
+                            <a href="javascript:void(0);">应用市场</a>
+                            <a href="javascript:void(0);">华为终端云空间</a>
+                            <a href="javascript:void(0);">开发者联盟</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_right">
+                <ul>
+                    <li><a href="login.html" id="welcomeId">请登录</a></li>
+                    <li><a id="registerId">注册</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">我的订单</a> &nbsp;|</li>
+                    <li>
+                        <i></i>
+                        <a href="javascript:void(0);">购物车(0)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <a href="javascript:void(0);">
+                <img src="img/index/logo.png" alt="">
+            </a>
+            <div class="header_left logo_cen">
+                <ul>
+                    <li><a href="javascript:void(0);">11·11</a></li>
+                    <li><a href="javascript:void(0);">华为</a></li>
+                    <li><a href="javascript:void(0);">荣耀</a></li>
+                    <li><a href="javascript:void(0);">MATE20系列</a></li>
+                    <li><a href="javascript:void(0);">荣耀10</a></li>
+                    <li><a href="javascript:void(0);">P20系列</a></li>
+                    <li><a href="javascript:void(0);">荣耀V10系列</a></li>
+                </ul>
+            </div>
+            <div class="logo_right">
+                <div class="search1">
+                    <input type="text" class="txt">
+                    <input type="submit" value="搜索" class="btn">
+                </div>
+                <div class="search">
+                    <a href="javascript:void(0)">HUAWEI MATE20</a>
+                    <a href="javascript:void(0)">荣耀Magic2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- section 部分 -->
+    <section>
+        <div class="line"></div>
+        <div class="section_cen">
+            <div class="section_top">
+                <a href="index.html">首页&nbsp;&nbsp;></a>
+                <a href="javascript:void(0);">手机&nbsp;&nbsp;></a>
+                <a href="javascript:void(0);">荣耀</a>
+            </div>
+            <div class="layout">
+                <div class="layout1">分类：
+                    <a href="javascript:void(0);" style="color:red;">全部</a>
+                    <a href="javascript:void(0);">荣耀HUAWEI</a>
+                    <a href="javascript:void(0);">HUAWEI IP系列</a>
+                    <a href="javascript:void(0);">荣耀畅玩系列</a>
+                    <a href="javascript:void(0);">HUAWEI Mate系列</a>
+                    <a href="javascript:void(0);">nova系列</a>
+                    <a href="javascript:void(0);">HUAWEI 麦芒系列</a>
+                    <a href="javascript:void(0);">华为畅享系列</a>
+                    <a href="javascript:void(0);">移动4G+专区</a>
+                </div>
+                <div class="layout1 layout2">排序：
+                    <a href="javascript:void(0);" style="color:red;" class="price">上架时间<i></i></a>
+                    <a href="javascript:void(0);" class="price">价格<i></i></a>
+                    <a href="javascript:void(0);" class="assess">评价数<i></i></a>
+                </div>
+            </div>
+            <div class="list">
+                <!-- 动态创建 -->
+            </div>
+        </div>
+    </section>
+    <div id="boxFooter"></div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/Cookie.js"></script>
+<script>
+    $(function(){
+        $("#boxFooter").load("publicF.html");
+       var s=getCookie("indexList");
+    //    var m= s.split("=");
+    //    var n= m[1];
+    //    console.log(n);
+          //ajax
+		$.ajax({
+			type:"get",
+			url:"php/getGoodsListList.php",
+			async:true,
+            // data:null,
+			success:function(data){
+                var listdata = '';
+				for(var i=0;i<data.length;i++){
+                    if(data[i].goodsType == s){
+                        listdata += '<div class="list1">\
+                            <span class="proId" style="display:none">'+data[i].goodsId+'</span>\
+                            <a href="javascript:void(0);" title='+data[i].goodsName+'>\
+                                <img class="imgs1" src='+data[i].goodsImg+'>\
+                                <img class="imgs2" src='+data[i].beiyong3+'>\
+                            </a>\
+                            <span>'+data[i].goodsDesc+'</span>\
+                            <i>￥'+data[i].goodsPrice+'</i>\
+                            <p>\
+                                <em class="info">'+data[i].beiyong1+'</em>\
+                                <em>'+data[i].beiyong2+'</em>\
+                            </p>\
+                        </div>';
+                    }
+                }
+                    $(".list").html(listdata);  
+                    move(); //鼠标滑过列表的样式(当发送ajax请求成功时调用此函数)
+                
+                // 设置cookie
+                $(".list .list1").each(function(){
+                    $(this).click(function(){
+                        let proIds = $(this).find(".proId").html();
+                        setCookie("send",proIds,1);
+                        window.open("productDetails.html");
+                    })
+                })
+            },
+            error:function(){
+                console.log(111)
+            },
+		    dataType:"json"
+		});
+    });
+
+function move (){
+    //商品列表，鼠标滑过变色
+    var list1=document.getElementsByClassName("list1");
+        var info=document.getElementsByClassName("info");
+        for(let i=0;i<list1.length;i++){
+            list1[i].onmouseenter=function(){
+                list1[i].style.border="1px solid red";
+            }
+            list1[i].onmouseleave=function(){
+                list1[i].style.border="1px solid #dedede";
+            }
+            for(let j=0;j<info.length;j++){
+                info[j].onmouseenter=function(){
+                    info[j].style.background="#e01d20";
+                    info[j].style.color="white";
+                }
+                info[j].onmouseleave=function(){
+                    info[j].style.background="white";
+                    info[j].style.color="#e01d20";
+                }
+            }
+        }
+}
+</script>

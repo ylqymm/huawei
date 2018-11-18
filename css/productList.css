@@ -1,0 +1,259 @@
+@charset "UTF-8";
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+i, em {
+  font-style: normal;
+  display: inline-block; }
+
+span {
+  display: inline-block; }
+
+/*header部分*/
+header {
+  width: 100%; }
+
+.header_cen {
+  width: 1200px;
+  margin: 10px auto 0px; }
+
+.header_top {
+  height: 20px; }
+
+.header_left {
+  float: left; }
+  .header_left ul li {
+    float: left;
+    color: #a4a4a4;
+    margin-right: 15px;
+    font-size: 12px; }
+    .header_left ul li:hover .span {
+      transition: all 0.8s;
+      transform: rotate(-180deg);
+      position: absolute;
+      right: -14px; }
+    .header_left ul li a {
+      color: #a4a4a4;
+      font-size: 12px;
+      display: inline-block;
+      position: relative; }
+      .header_left ul li a:hover {
+        color: #ca141d; }
+      .header_left ul li a .span {
+        width: 0px;
+        height: 0px;
+        border: 6px solid transparent;
+        border-top-color: #999;
+        display: inline-block;
+        position: absolute;
+        top: 7px;
+        right: -14px; }
+    .header_left ul li .p {
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      z-index: 9;
+      width: 144px;
+      height: 144px;
+      background: white;
+      text-align: center;
+      box-shadow: 0 2px 6px 0 rgba(121, 121, 121, 0.26);
+      display: none; }
+      .header_left ul li .p img {
+        margin: 20px 0px 5px 0px; }
+      .header_left ul li .p a {
+        margin-top: 15px;
+        display: block;
+        color: #3a3a3a; }
+  .header_left ul .app {
+    position: relative; }
+    .header_left ul .app:hover .p {
+      display: block; }
+
+.header_right {
+  float: right;
+  overflow: hidden; }
+  .header_right ul li {
+    float: left;
+    color: #b1a4be;
+    margin-right: 15px;
+    font-size: 12px; }
+    .header_right ul li a {
+      color: #a4a4a4;
+      font-size: 12px;
+      cursor: pointer; }
+    .header_right ul li a:hover {
+      color: #ca141d; }
+    .header_right ul li i {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      margin-right: 10px;
+      background: url(../img/index/icon.png) no-repeat left center;
+      background-position: 0px 1px;
+      vertical-align: middle; }
+
+.header_bottom {
+  clear: both;
+  margin: 20px 0px;
+  overflow: hidden; }
+  .header_bottom img {
+    float: left; }
+  .header_bottom .logo_cen {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    float: left; }
+    .header_bottom .logo_cen ul {
+      overflow: hidden;
+      height: 50px; }
+      .header_bottom .logo_cen ul li {
+        height: 50px;
+        line-height: 50px; }
+      .header_bottom .logo_cen ul li a {
+        color: #3a3a3a;
+        font-size: 14px;
+        display: inline-block;
+        padding: 4px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center; }
+      .header_bottom .logo_cen ul li a:hover {
+        color: #ca141d;
+        border-bottom: 2px solid #ca141d; }
+  .header_bottom .logo_right {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #a4a4a4;
+    border-radius: 2px;
+    float: right; }
+  .header_bottom .search1 {
+    position: relative;
+    width: 330px;
+    height: 30px; }
+    .header_bottom .search1 .txt {
+      width: 300px;
+      height: 30px;
+      border: 0;
+      outline: none;
+      margin-left: 5px;
+      z-index: 6; }
+    .header_bottom .search1 .btn {
+      width: 22px;
+      height: 33px;
+      text-indent: -9999px;
+      position: absolute;
+      right: 10px;
+      background: url(../img/index/icon.png) no-repeat left center;
+      background-position: 0px -21px;
+      border: 0;
+      outline: none;
+      cursor: pointer; }
+  .header_bottom .search {
+    position: absolute;
+    top: -6px;
+    left: 5px;
+    display: inline-block;
+    border-radius: 2px;
+    margin-top: 10px;
+    z-index: 1; }
+    .header_bottom .search a {
+      height: 22px;
+      line-height: 22px;
+      color: #b1a4be;
+      font-size: 12px;
+      display: inline-block;
+      background: #f5f5f5;
+      margin-left: 10px; }
+    .header_bottom .search a:hover {
+      color: #ca141d; }
+
+section {
+  width: 100%; }
+  section .line {
+    width: 100%;
+    height: 7px;
+    background: url(../img/productList/nav_shadow.png) repeat-x; }
+  section .section_cen {
+    width: 1200px;
+    margin: 0 auto; }
+    section .section_cen .section_top {
+      height: 40px;
+      line-height: 40px;
+      color: #999;
+      font-size: 12px; }
+      section .section_cen .section_top a {
+        color: #666;
+        margin-right: 15px; }
+    section .section_cen .layout1 {
+      border: 1px solid #999;
+      padding: 15px 0px 15px 30px;
+      font-size: 12px; }
+      section .section_cen .layout1 a {
+        margin-left: 18px;
+        color: #666; }
+    section .section_cen .layout2 {
+      border-top: 0; }
+      section .section_cen .layout2 i {
+        width: 10px;
+        height: 10px;
+        margin-left: 5px; }
+      section .section_cen .layout2 .price i {
+        background: url(../img/productList/icon1.png) 0px -70px; }
+        section .section_cen .layout2 .price i:hover {
+          background: url(../img/productList/icon1.png) 0px -90px; }
+      section .section_cen .layout2 .assess i {
+        background: url(../img/productList/icon1.png) 0px -28px; }
+        section .section_cen .layout2 .assess i:hover {
+          background: url(../img/productList/icon1.png) 0px -52px; }
+
+.list {
+  margin-top: 20px; }
+  .list .list1 {
+    float: left;
+    text-align: center;
+    border: 1px solid #dedede;
+    margin: 0px 19px 20px 0px; }
+    .list .list1 a {
+      display: block;
+      padding: 38px 21px 24px;
+      position: relative; }
+      .list .list1 a .imgs1 {
+        width: 180px;
+        height: 180px; }
+      .list .list1 a .imgs2 {
+        position: absolute;
+        bottom: 10px;
+        right: 20px; }
+    .list .list1 span {
+      display: block;
+      color: #666;
+      font-size: 12px; }
+    .list .list1 i {
+      display: block;
+      font-size: 15px;
+      color: #e01d20;
+      margin: 25px 0px; }
+  .list .list1:nth-of-type(5n) {
+    margin-right: 0px; }
+  .list p {
+    border-top: 1px solid #dedede; }
+    .list p em {
+      font-size: 12px;
+      padding: 10px 30px; }
+    .list p em:nth-of-type(1) {
+      color: #e01d20;
+      border-right: 1px solid #dedede;
+      cursor: pointer; }
+    .list p em:nth-of-type(2) {
+      color: #999; }

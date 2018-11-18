@@ -1,0 +1,223 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+	<body>
+		<div class="register">
+			<div class="logo">
+				<img src="img/HUAWEI.png"/>
+				<h3> | 华为商城</h3>
+			</div>
+		</div>
+		<div class="pink">依据《网络安全法》，为保障您的帐号安全与正常使用，请尽快绑定您的手机号，感谢您的理解及支持！</div>
+		<div class="content">
+			<div class="w990">
+				<div class="login">
+					<div class="login_con">
+						<div class="login_erweima"></div>
+						<div class="login_wrap">
+							<div class="login_top">
+								<span>还没有华为账号？</span>
+								<a href="register.html">立即注册 ></a>
+							</div>
+							<div class="login_down">
+								<ul>
+									<li><a href="#">账号登录</a></li>
+									<li><a href="#">扫码登录</a></li>
+								</ul>
+								<form >
+									<!--普通登录-->
+									<div class="login_form phone">
+										<div class="all">
+											<input type="text" placeholder="已验证手机/邮箱/用户名" name="userName"  id="usernameId"/>
+											<p id="usernameP"></p>
+										</div>
+										<div class="all">
+											<input type="password" placeholder="密码" name="passwordName" id="passwordId" />
+											<p id="passwordP"></p>
+										</div>
+										
+										<div class="submit">
+											<a href="javascrpit:;">忘记密码？</a>
+										</div>
+										<div class="finish">
+											<input type="button" value="立即登录" id="btn"/>
+											<p id="tishi"></p>
+										</div>
+										<div class="other">
+											<p>
+												<img src="img/thirdLine.png" alt="">
+												<span>其他登录方式</span>
+												<img src="img/thirdLine-reverse.png" alt="">
+											</p>
+											<div class="pay">
+												<a href="javascript:void(0);" title="QQ"></a>
+												<a href="javascript:void(0);" title="支付宝"></a>
+												<a href="javascript:void(0);" title="微信"></a>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form >
+									<!--动态登录-->
+									<div class="active">
+										<a href="javascript:void(0);">
+											<img src="img/erweima.png" alt="" class="erweima">
+											<span>
+												<i>二维码失效</i><br>
+												<i>刷新</i>
+											</span>
+										</a>
+										<img src="img/erweima1.png" alt="" class="erweima1">
+										<p>
+											<span>使用华为移动服务APP扫一扫</span>
+											<span>若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</span>
+										</p>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer部分-->
+		<div class="footer">
+			<div class="footer_center">
+				<a href="#">华为账号用户协议</a> |
+				<a href="#">关于华为账号与隐私声明</a> |
+				<a href="#">常见问题</a>
+				<p>Copyright © 2011-2018  华为软件技术有限公司  版权所有  保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Cookie.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+	$(function(){
+		$(".login_down ul li:nth-of-type(1)").click(function(){
+			$(".phone").css({display:"block"});
+			$(".active").css({display:"none"});
+			$(this).css({
+				border:"1px solid #e31939",
+				borderBottom:"none"
+			});
+			$(".login_down ul li:nth-of-type(2)").css({
+				border:"none",
+				borderBottom:"1px solid #e31939"
+			});
+		});
+		$(".login_down ul li:nth-of-type(2)").click(function(){
+			$(".phone").css({display:"none"});
+			$(".active").css({display:"block"});
+			$(this).css({
+				border:"1px solid #e31939",
+				borderBottom:"none"
+		});
+			
+			$(".login_down ul li:nth-of-type(1)").css({
+				border:"none",
+				borderBottom:"1px solid #e31939"
+			});
+	});
+
+		//正则验证
+		$('#usernameId').keyup(function(){
+		if(check($(this).val(),"userName")){
+			$('#usernameP').html('');
+			return;
+		}else{
+			$('#usernameP').html('！电话号码格式有误');
+		}
+	});
+	$('#passwordId').keyup(function(){
+		if(check($(this).val(),"passwordName")){
+			$('#passwordP').html('');
+			return;
+		}else{
+			$('#passwordP').html('！密码长度为6-16位,限制为字母开头');
+		}
+	});
+	function check(str,type){
+		switch(type){
+			case 'userName':
+			var pattern=/^[1]\d{10}$/g;
+			break;
+			case 'passwordName':
+			var pattern=/^^[a-zA-Z]\w{5,15}$/g;
+		}
+		return pattern.test(str);
+	}
+
+	$("#btn").click(function(){
+		//console.log(123);
+		let xhr=new XMLHttpRequest();
+		xhr.open("post","php/loginCheck.php",true);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				let str= xhr.responseText;
+				if(str=="1"){
+					$("#tishi").css({"display":"block"});
+					waitting(); //调用跳转函数
+					$("#tishi").html('登录成功,<span id="timer">5</span>秒后跳转到登录页面!');
+				}
+				if(str=="-1"){
+					$("#tishi").css({"display":"block"});
+					$("#tishi").html("登录失败，用户名不存在!");
+				}		
+			}
+		}
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		let str="username="+$("#usernameId").val()+"&userpass="+$("#passwordId").val();
+		xhr.send(str);
+		
+		//设置cookie
+		setCookie("username",$("#usernameId").val(),100);
+
+	});
+	//登录成功后跳转函数(在条件str==1时，即注册成功时调用)
+	function waitting(){
+			let second=5;
+			let letTimer=setInterval(function(){
+				second--;
+				if(second<=0){
+					clearInterval(letTimer);
+					location.href="index.html";
+				}
+				$("#timer")[0].innerHTML=second;
+				$("#timer")[0].style.cssText="color:red;font-size:18px";
+			},1000);
+		}
+
+	//二维码
+	var a=$(".active").find("a");
+	$(".active").hover(
+		function(){
+			a.animate({
+				"left":"0"
+			},800,function(){
+				a.find("span").animate({
+					"opacity":1
+				},10000);
+			});
+			$(".erweima1").css({"opacity":1});
+		},
+		function(){
+			a.animate({
+				"left":"70"
+			},800,function(){
+				a.find("span").animate({
+					"opacity":0
+				},800);
+			});
+			$(".erweima1").css({"opacity":0});
+		}
+	);
+});
+</script>

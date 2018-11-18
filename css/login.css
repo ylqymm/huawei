@@ -1,0 +1,278 @@
+@charset "UTF-8";
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+i {
+  font-style: normal; }
+
+.register {
+  width: 100%;
+  overflow: hidden;
+  background: #ebebeb; }
+
+.register img {
+  float: left; }
+
+.register h3 {
+  display: inline-block;
+  font-size: 20px;
+  float: left;
+  margin-left: 10px;
+  padding-left: 10px;
+  font-weight: 100;
+  color: black; }
+
+.logo {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px;
+  height: 45px;
+  line-height: 45px; }
+
+.pink {
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  background: #fffbe4;
+  text-align: center;
+  color: #999; }
+
+.content {
+  height: 500px;
+  background: #081638 url(../img/login.png) no-repeat center; }
+
+.w990 {
+  width: 1200px;
+  margin: 0 auto;
+  /* overflow: hidden; */
+  position: relative; }
+
+.login {
+  width: 380px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #fff; }
+
+.login_con {
+  padding: 15px 30px; }
+
+.login_erweima {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  right: 10px;
+  top: 10px;
+  background: url(../img/picture.png) no-repeat -309px 0px; }
+
+.login_top {
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  margin-bottom: 25px; }
+
+.login_top span {
+  color: #999; }
+
+.login_top a {
+  color: #e31939; }
+
+.login_down ul {
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 25px; }
+
+.login_down li {
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 16px; }
+
+.login_down li a {
+  color: #666; }
+
+.login_down ul li:nth-of-type(1) {
+  border: 1px solid #e31939;
+  border-bottom: none; }
+
+.login_down ul li:nth-of-type(2) {
+  border-bottom: 1px solid #e31939;
+  margin-left: -5px; }
+
+.all {
+  margin-bottom: 25px; }
+
+.login_down input {
+  width: 243px;
+  height: 40px;
+  font-size: 12px;
+  color: #999;
+  padding-left: 42px;
+  border: 1px solid #999;
+  outline: none; }
+
+.login_down p {
+  color: red;
+  font-size: 12px; }
+
+.finish #btn {
+  padding-left: 0; }
+
+#usernameId {
+  background: url(../img/user.jpg) no-repeat 12px center; }
+
+#passwordId {
+  background: url(../img/pass.jpg) no-repeat 12px center; }
+
+.submit {
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 16px; }
+
+.submit a {
+  font-size: 12px;
+  color: #666;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer; }
+
+.submit a:nth-of-type(2) {
+  float: right; }
+
+.submit a:hover {
+  color: #e31939; }
+
+.submit input {
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  outline: none; }
+
+.login_down .finish input {
+  background: #e31939;
+  border: 0;
+  color: white;
+  outline: none;
+  width: 285px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  outline: none;
+  cursor: pointer; }
+
+/*动态验证码*/
+.active {
+  height: 320px;
+  display: none;
+  text-align: center;
+  position: relative;
+  margin-top: 20px; }
+  .active a {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    border: 1px solid #666;
+    position: absolute;
+    left: 70px;
+    top: 0px; }
+    .active a .erweima {
+      width: 140px;
+      height: 140px;
+      z-index: 4; }
+    .active a span {
+      display: inline-block;
+      width: 140px;
+      height: 140px;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      background: rgba(49, 49, 49, 0.5) !important;
+      z-index: 9999;
+      opacity: 0; }
+      .active a span i {
+        display: inline-block;
+        font-size: 14px; }
+      .active a span i:nth-of-type(1) {
+        margin-top: 55px; }
+      .active a span i:nth-of-type(2) {
+        padding: 8px;
+        width: 50px;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+        background: #293bdb;
+        border-radius: 30px; }
+  .active .erweima1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0; }
+  .active p {
+    position: absolute;
+    bottom: 50px;
+    left: 0; }
+    .active p span {
+      display: block;
+      color: #666;
+      font-size: 12px; }
+
+/*footer_center部分*/
+.footer_center {
+  width: 990px;
+  margin: 20px auto;
+  text-align: center;
+  color: #999;
+  font-size: 12px; }
+
+.footer_center p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px; }
+
+.footer_center a {
+  color: #999;
+  font-size: 12px;
+  margin-top: 13px;
+  display: inline-block; }
+
+.other p {
+  margin-top: 20px; }
+  .other p img {
+    vertical-align: middle; }
+  .other p span {
+    display: inline-block;
+    padding: 0px 25px;
+    color: #999;
+    font-size: 12px; }
+
+.other .pay {
+  text-align: center;
+  margin-top: 10px; }
+  .other .pay a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: url(../img/login-all.png);
+    margin-right: 10px; }
+  .other .pay a:nth-of-type(1) {
+    background-position: -73px -10px; }
+    .other .pay a:nth-of-type(1):hover {
+      background-position: -73px -55px; }
+  .other .pay a:nth-of-type(2) {
+    background-position: -133px -10px; }
+    .other .pay a:nth-of-type(2):hover {
+      background-position: -133px -55px; }
+  .other .pay a:nth-of-type(3) {
+    background-position: -13px -10px; }
+    .other .pay a:nth-of-type(3):hover {
+      background-position: -13px -55px; }

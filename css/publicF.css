@@ -1,0 +1,103 @@
+.friendship {
+  width: 100%;
+  background: #f0f0f0;
+  overflow: hidden; }
+  .friendship .friendship_cen {
+    width: 1200px;
+    margin: 0 auto; }
+    .friendship .friendship_cen .friendship_top {
+      height: 55px;
+      line-height: 55px;
+      padding: 40px 0px 70px 0px; }
+      .friendship .friendship_cen .friendship_top li {
+        float: left;
+        margin-left: 86px; }
+        .friendship .friendship_cen .friendship_top li a {
+          display: inline-block;
+          font-size: 18px;
+          color: #3a3a3a; }
+          .friendship .friendship_cen .friendship_top li a:hover {
+            color: #ca141d; }
+          .friendship .friendship_cen .friendship_top li a i {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            vertical-align: middle;
+            margin-right: 17px;
+            background: url(../img/index/icon.png) no-repeat left center; }
+      .friendship .friendship_cen .friendship_top li:nth-of-type(1) {
+        margin-left: 0px; }
+        .friendship .friendship_cen .friendship_top li:nth-of-type(1) i {
+          background-position: 1px -150px; }
+      .friendship .friendship_cen .friendship_top li:nth-of-type(2) i {
+        background-position: -46px -150px; }
+      .friendship .friendship_cen .friendship_top li:nth-of-type(3) i {
+        background-position: -93px -150px; }
+      .friendship .friendship_cen .friendship_top li:nth-of-type(4) i {
+        background-position: -140px -150px; }
+    .friendship .friendship_cen .friendship_bottom {
+      clear: both; }
+      .friendship .friendship_cen .friendship_bottom ul {
+        padding-bottom: 40px; }
+        .friendship .friendship_cen .friendship_bottom ul li {
+          float: left;
+          padding-right: 55px; }
+          .friendship .friendship_cen .friendship_bottom ul li h4 {
+            font-weight: 100;
+            font-size: 14px;
+            padding-bottom: 20px; }
+          .friendship .friendship_cen .friendship_bottom ul li ul li {
+            clear: both;
+            padding-bottom: 10px; }
+            .friendship .friendship_cen .friendship_bottom ul li ul li a {
+              color: #666; }
+              .friendship .friendship_cen .friendship_bottom ul li ul li a:hover {
+                color: #ca141d; }
+        .friendship .friendship_cen .friendship_bottom ul li:last-of-type {
+          padding-right: 0px;
+          text-align: center; }
+          .friendship .friendship_cen .friendship_bottom ul li:last-of-type h3 {
+            font-size: 20px;
+            font-weight: 100; }
+          .friendship .friendship_cen .friendship_bottom ul li:last-of-type p {
+            color: #666;
+            margin: 15px 0px; }
+          .friendship .friendship_cen .friendship_bottom ul li:last-of-type .fu {
+            display: inline-block;
+            color: #ca141d;
+            width: 160px;
+            height: 35px;
+            background: white;
+            border-radius: 4px;
+            line-height: 35px;
+            border: 1px solid #f0f0f0; }
+            .friendship .friendship_cen .friendship_bottom ul li:last-of-type .fu i {
+              display: inline-block;
+              width: 25px;
+              height: 20px;
+              background: url(../img/index/icon.png) -100px -22px;
+              vertical-align: middle; }
+
+footer {
+  width: 100%;
+  background: #e6e6e6; }
+  footer .footer_cen {
+    width: 1200px;
+    padding: 30px 0px;
+    margin: 0 auto; }
+    footer .footer_cen .footer1 {
+      display: inline-block;
+      margin-left: 35px; }
+      footer .footer_cen .footer1 p {
+        font-size: 12px;
+        color: #666; }
+        footer .footer_cen .footer1 p a {
+          color: #666; }
+          footer .footer_cen .footer1 p a:hover {
+            color: #ca141d; }
+    footer .footer_cen .footer2 {
+      display: inline-block;
+      float: right; }
+      footer .footer_cen .footer2 img {
+        width: 68px;
+        height: 25px; }

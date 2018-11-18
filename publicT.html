@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/publicT.css">
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+</head>
+<body>
+    <!-- logoDel部分 -->
+<div class="logoDel">
+    <div class="logoDel_cen">
+        <a href="javascript:void(0);">
+            <img src="img/index/logoDel.jpg" alt="" style="width: 100%;height: 90px;">
+        </a>
+        <a href="javascript:void(0);"><span>x</span></a>
+    </div>
+</div>
+<!-- header部分 -->
+<header>
+    <div class="header_cen">
+        <div class="header_top">
+            <div class="header_left">
+                <ul>
+                    <li><a href="index.html">首页</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">华为官网</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">荣耀官网</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">花粉俱乐部</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">帮助中心</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">V码(优乐码)</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">企业购</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">Select Region</a> &nbsp;|</li>
+                    <li class="app">
+                        <a href="javascript:void(0);">下载APP&nbsp; <span class="span"></span>
+                        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+                        <div class="p">
+                            <img src="img/index/erweima.png" alt="">
+                            <p>扫一扫，下载客户端</p>
+                        </div>
+                    </li>
+                    <li class="app"><a href="javascript:void(0);">更多精彩 &nbsp;<span class="span"></span></a>
+                        <div class="p">
+                            <a href="javascript:void(0);">EMUI</a>
+                            <a href="javascript:void(0);">应用市场</a>
+                            <a href="javascript:void(0);">华为终端云空间</a>
+                            <a href="javascript:void(0);">开发者联盟</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_right">
+                <ul>
+                    <li><a href="javascript:;" id="welcomeId">请登录</a></li>
+                    <li><a id="registerId">注册</a> &nbsp;|</li>
+                    <li><a href="javascript:void(0);">我的订单</a> &nbsp;|</li>
+                    <li>
+                        <i></i>
+                        <a href="shopingCart.html">购物车(0)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <a href="javascript:void(0);" title="Vmall.com - 华为商城">
+                <img src="img/index/logo.png" alt="">
+            </a>
+            <div class="header_left logo_cen">
+                <ul>
+                    <li><a href="javascript:void(0);">11·11</a></li>
+                    <li><a href="javascript:void(0);">华为</a></li>
+                    <li><a href="javascript:void(0);">荣耀</a></li>
+                    <li><a href="javascript:void(0);">MATE20系列</a></li>
+                    <li><a href="javascript:void(0);">荣耀10</a></li>
+                    <li><a href="javascript:void(0);">P20系列</a></li>
+                    <li><a href="javascript:void(0);">荣耀V10系列</a></li>
+                </ul>
+            </div>
+            <div class="logo_right">
+                <div class="search1">
+                    <input type="text" class="txt">
+                    <input type="submit" value="搜索" class="btn">
+                </div>
+                <div class="search">
+                    <a href="javascript:void(0)">HUAWEI MATE20</a>
+                    <a href="javascript:void(0)">荣耀Magic2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- 返回顶部部分 -->
+<div class="back">
+    <ul class="back_uls">
+        <li class="backTop">
+            <a href="javascript:void(0);">
+                <i></i>
+            </a>
+            <div class="slider-title con">回到顶部</div>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <i></i>
+                <span id="spans"></span>
+            </a>
+            <ul class="con cons">
+                <li>
+                    <a href="javascript:void(0);">
+                        <i></i>
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <i></i>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- 登录弹框 -->
+<div class="login_conAll">
+    <div class="login_con">
+    <div class="login_erweima"></div>
+    <div class="login_wrap">
+        <div class="login_top">
+            <span>还没有华为账号？</span>
+            <a href="register.html">立即注册 ></a>
+            <i class="del">X</i>
+        </div>
+        <div class="login_down">
+            <ul>
+                <li><a href="javascript:;">账号登录</a></li>
+                <li><a href="javascript:;">扫码登录</a></li>
+            </ul>
+            <form >
+                <!--普通登录-->
+                <div class="login_form phone">
+                    <div class="all">
+                        <input type="text" placeholder="已验证手机/邮箱/用户名" name="userName"  id="usernameId"/>
+                        <p id="usernameP"></p>
+                    </div>
+                    <div class="all">
+                        <input type="password" placeholder="密码" name="passwordName" id="passwordId" />
+                        <p id="passwordP"></p>
+                    </div>
+                    
+                    <div class="submit">
+                        <a href="javascrpit:;">忘记密码？</a>
+                    </div>
+                    <div class="finish">
+                        <input type="button" value="立即登录" id="btn"/>
+                        <p id="tishi"></p>
+                    </div>
+                    <div class="other">
+                        <p>
+                            <img src="img/thirdLine.png" alt="">
+                            <span>其他登录方式</span>
+                            <img src="img/thirdLine-reverse.png" alt="">
+                        </p>
+                        <div class="pay">
+                            <a href="javascript:void(0);" title="QQ"></a>
+                            <a href="javascript:void(0);" title="支付宝"></a>
+                            <a href="javascript:void(0);" title="微信"></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form >
+                <!--动态登录-->
+                <div class="active">
+                    <a href="javascript:void(0);">
+                        <img src="img/erweima.png" alt="" class="erweima">
+                        <span>
+                            <i>二维码失效</i><br>
+                            <i>刷新</i>
+                        </span>
+                    </a>
+                    <img src="img/erweima1.png" alt="" class="erweima1">
+                    <p>
+                        <span>使用华为移动服务APP扫一扫</span>
+                        <span>若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/Cookie.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    $(function(){
+        //侧边效果
+        // let Lis=$(".back")[0].firstElementChild.children;
+        // let Lis = $(".back").find("li");
+        let Liss = $(".back_uls")[0].children;
+        for(let i=0;i<Liss.length;i++){
+            Liss[i].onmouseenter=function(){
+                Liss[i].style.display="block";
+                $(".con")[i].style.cssText="left:-78px;opacity:1";
+                $(this).find("#spans").css({"display":"block"});
+                $(this).find(".cons").css({"display":"block"});
+            }
+            Liss[i].onmouseleave=function(){
+                $(this).find(".slider-title").css({"display":"none"});
+                $(this).find("#spans").css({"display":"none"});
+                $(this).find(".cons").css({"display":"none"});
+            }
+        }
+
+        //返回顶部
+        $(window).scroll(function(){
+            if($(this).scrollTop()>$(window).height()){
+                $(".backTop").show();
+            }else{
+                $(".backTop").hide();
+            }
+        });
+        $(".backTop").click(function(){
+            $("body,html").animate({
+                scrollTop:0
+            },800);
+            return false
+        });
+
+
+
+        //顶部删除
+        let span=$(".logoDel_cen").find("a").find("span");
+        span.click(function(){
+            $(".logoDel").animate({
+                "height":0
+            },200,function(){
+                $(this).remove();
+            });
+        });
+
+        //搜索框
+        let txt=$(".txt")[0];
+        txt.onfocus=function(){
+             $(".search")[0].style.display="none";
+        }
+
+
+//cookie登录
+    var username = getCookie("username");
+    if(username!=null){    
+        $("#welcomeId").html(username);
+        $("#registerId").html("<a id=\"zhuxiao\">注销</a>");
+        $("#zhuxiao").click(function(){
+            console.log(98)
+            setCookie("username",$("#usernameId").val(),-1);
+            location.href="login.html";
+        });
+    }else{
+        $("#welcomeId").html("请登录");
+        $("#registerId").html("<a id=\"reg\">注册</a>");
+        $("#reg").click(function(){
+            location.href="register.html";
+        });
+    }
+
+
+
+    //登录弹框
+    $(".login_down ul li:nth-of-type(1)").click(function(){
+            $(this).find("a").css({"color":"#ca141d"});
+        $(".login_down ul li:nth-of-type(2)").find("a").css({"color":"#666"});
+			$(".phone").css({display:"block"});
+			$(".active").css({display:"none"});
+		});
+    $(".login_down ul li:nth-of-type(2)").click(function(){
+        $(this).find("a").css({"color":"#ca141d"});
+        $(".login_down ul li:nth-of-type(1)").find("a").css({"color":"#666"});
+        $(".phone").css({display:"none"});
+        $(".active").css({display:"block"});
+	});
+
+		//正则验证
+		$('#usernameId').keyup(function(){
+		if(check($(this).val(),"userName")){
+			$('#usernameP').html('');
+			return;
+		}else{
+			$('#usernameP').html('！电话号码格式有误');
+		}
+	});
+	$('#passwordId').keyup(function(){
+		if(check($(this).val(),"passwordName")){
+			$('#passwordP').html('');
+			return;
+		}else{
+			$('#passwordP').html('！密码长度为6-16位,限制为字母开头');
+		}
+	});
+	function check(str,type){
+		switch(type){
+			case 'userName':
+			var pattern=/^[1]\d{10}$/g;
+			break;
+			case 'passwordName':
+			var pattern=/^^[a-zA-Z]\w{5,15}$/g;
+		}
+		return pattern.test(str);
+	}
+
+	$("#btn").click(function(){
+		//console.log(123);
+		let xhr=new XMLHttpRequest();
+		xhr.open("post","php/loginCheck.php",true);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				let str= xhr.responseText;
+				if(str=="1"){
+					$("#tishi").css({"display":"block"});
+					waitting(); //调用跳转函数
+					$("#tishi").html('登录成功,<span id="timer">5</span>秒后跳转到登录页面!');
+				}
+				if(str=="-1"){
+					$("#tishi").css({"display":"block"});
+					$("#tishi").html("登录失败，用户名不存在!");
+				}		
+			}
+		}
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		let str="username="+$("#usernameId").val()+"&userpass="+$("#passwordId").val();
+		xhr.send(str);
+		
+		//设置cookie
+		setCookie("username",$("#usernameId").val(),100);
+
+	});
+	//登录成功后跳转函数(在条件str==1时，即注册成功时调用)
+	function waitting(){
+			let second=5;
+			let letTimer=setInterval(function(){
+				second--;
+				if(second<=0){
+					clearInterval(letTimer);
+					location.href="index.html";
+				}
+				$("#timer")[0].innerHTML=second;
+				$("#timer")[0].style.cssText="color:red;font-size:18px";
+			},1000);
+		}
+
+	//二维码
+	var a=$(".active").find("a");
+	$(".active").hover(
+		function(){
+			a.animate({
+				"left":"0"
+			},800,function(){
+				a.find("span").animate({
+					"opacity":1
+				},10000);
+			});
+			$(".erweima1").css({"opacity":1});
+		},
+		function(){
+			a.animate({
+				"left":"70"
+			},800,function(){
+				a.find("span").animate({
+					"opacity":0
+				},800);
+			});
+			$(".erweima1").css({"opacity":0});
+		}
+    );
+    
+    $("#welcomeId").click(function(){
+        $(".login_conAll").css(
+            {
+                "display":"block",
+                "z-index":"9999"
+            });
+        console.log($("html,body").height())
+        $(".del").click(function(){
+            $(".login_conAll").css({"display":"none"});
+        });
+    });
+});
+</script>

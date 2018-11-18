@@ -1,0 +1,5 @@
+	ec.product.inventory.set("10086646814014" ,  true);
+	ec.product.inventory.set("10086555113271" ,  true);
+	ec.product.inventory.set("10086212501655" ,  true);
+	ec.product.inventory.set("10086840957223" ,  true);
+	ec.product.inventory.set("10086251989895" ,  true);

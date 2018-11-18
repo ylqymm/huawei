@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<style type="text/css">
+		#welcome{
+			display: none;
+		}
+		#login{
+			display: none;
+		}
+		a{
+			text-decoration: none;
+			font-size: 18px;
+			color: skyblue;
+		}
+		#timer{
+			color: red;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="welcome">
+		欢迎您来到华为官网：<span id="usernameSpan"></span><br/>
+		<span id="timer">5</span>秒后跳转到<a href="index.html">首页</a>
+	</div>
+	<div id="login">
+		<a href="login.html">请登录</a>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/Cookie.js"></script>
+<script type="text/javascript">
+	function $(id){
+		return document.getElementById(id);
+	}
+	function waitting(){
+		let second=5;
+		let letTimer=setInterval(function(){
+			second--;
+			if(second<=0){
+				clearInterval(letTimer);
+				location.href="index.html";
+			}
+			$("timer").innerHTML=second;
+		},1000);
+	}
+	window.onload = function(){
+		var username = getCookie("username");
+		if(username!=null){
+			$("welcome").style.display = "block";
+			$("usernameSpan").innerHTML = username;
+		}else{
+			$("login").style.display = "block";
+
+		}
+
+		waitting();
+	}
+</script>

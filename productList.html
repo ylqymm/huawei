@@ -120,11 +120,13 @@
 <script src="js/Cookie.js"></script>
 <script>
     $(function(){
-        $("#boxFooter").load("publicF.html");
+       $("#boxFooter").load("publicF.html");
+
        var s=getCookie("indexList");
-    //    var m= s.split("=");
-    //    var n= m[1];
-    //    console.log(n);
+       console.log(s)
+        //var m= s.split("");
+        //var n= m[0];
+        //console.log(n);
           //ajax
 		$.ajax({
 			type:"get",
@@ -150,7 +152,8 @@
                         </div>';
                     }
                 }
-                    $(".list").html(listdata);  
+                    $(".list").html(listdata);
+                    //console.log(listdata) 
                     move(); //鼠标滑过列表的样式(当发送ajax请求成功时调用此函数)
                 
                 // 设置cookie

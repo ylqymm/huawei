@@ -5,7 +5,7 @@ $.ajax({
 	data:null,
 	success:function(data){
 		var goods = getCookie("send");
-        // console.log(goodsId)
+    	 //console.log(goods)
 		// if(goodsId!=null){
 			var productlist = '';
 			for(var i=0;i<data.length;i++){

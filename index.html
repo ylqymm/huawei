@@ -523,18 +523,19 @@
                 
                     <div class="phone list">
                         <ul>
-                            <!-- <li>
+                             <li>
                                 <a href="javascript:void(0);">
                                     <img src="img/index/phone1.png" alt="" style="width:290px;height: 350px;">
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="javascript:void(0);">
                                     <img src="img/index/rx2.jpg" alt="" class="rx">
                                     <span>荣耀10</span>
                                     <i>最高优惠400赠377大礼包</i>
                                     <em>￥2299</em>
-                                </a> -->
+                                </a>
+                            </li>     -->
                         </ul>
                     </div>
                 </div>
@@ -1255,20 +1256,20 @@
 			async:true,
 			data:null,
 			success:function(data){
-                var listdata1 = '';
-                // var ll='';
-                listdata1+='<li>\
-                    <a href="javascript:void(0);">\
-                        <img src='+data[0].beiyong1+' style="width:290px;height: 350px;">\
-                    </a>\
-                </li>';
+                // var listdata1 = '';
+                // // var ll='';
+                // listdata1+='<li>\
+                //     <a href="javascript:void(0);">\
+                //         <img src='+data[0].beiyong1+' style="width:290px;height:350px;">\
+                //     </a>\
+                // </li>';
                 var listdata = '';
-                $(".list ul").append(listdata1);
+                // $(".list ul").append(listdata1);
 				for(var i=1;i<data.length;i++){
 					listdata+='<li>\
                                 <a href="javascript:void(0);">\
                                     <img class="rx" src='+data[i].goodsImg+' >\
-                                    <img  class="small" src='+data[i].beiyong2+' >\
+                                    <img  class="small" src='+data[i].beiyong3+' >\
                                     <span>'+data[i].goodsName+'</span>\
                                     <i>'+data[i].goodsDesc+'</i>\
                                     <em>￥'+data[i].goodsPrice+'</em>\
